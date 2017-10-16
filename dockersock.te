@@ -1,0 +1,19 @@
+policy_module(dockersock, 1.0);
+
+virt_sandbox_domain_template(container_sock);
+
+require {
+	type docker_var_run_t;
+	type docker_t;
+	type svirt_lxc_net_t;
+	class sock_file write;
+	class unix_stream_socket connectto;
+}
+
+gen_require(`
+ attribute   sandbox_net_domain;
+')
+typeattribute container_sock_t sandbox_net_domain;
+
+allow container_sock_t docker_t:unix_stream_socket connectto;
+allow container_sock_t docker_var_run_t:sock_file write;

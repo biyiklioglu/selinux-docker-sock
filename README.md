@@ -26,3 +26,7 @@ Should you ever wish to remove the module, do
 ## Example
 
     docker run -d --security-opt label:type:container_sock_t --name centos centos sleep infinity
+
+## License
+
+[MIT](https://github.com/stone-payments/selinux-docker-sock/blob/master/LICENSE)

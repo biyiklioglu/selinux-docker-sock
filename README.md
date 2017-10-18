@@ -29,4 +29,4 @@ Should you ever wish to remove the module, do
 
 ## License
 
-MIT(https://github.com/stone-payments/selinux-docker-sock/blob/master/LICENSE)
+[MIT](https://github.com/stone-payments/selinux-docker-sock/blob/master/LICENSE)
